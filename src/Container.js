@@ -43,6 +43,7 @@ export default class Container extends PureComponent {
       const { currentTarget } = evt;
 
       raf(() => {
+        if(!this.node) return;
         this.framePending = false;
         const { top, bottom } = this.node.getBoundingClientRect();
 
